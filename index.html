@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bhasha - Early literacy monitoring & reading writing Skills enhancement in Sinhala & Tamil Languages. Academic research project website, Sri Lanka Institute of Information Technology (SLIIT)." />
+  <meta name="author" content="Sandali S. Karunarathna, Akshaya Thangaraja, Akif Ahamed, Nenuka N. Amaradasa" />
+  <title>Bhasha | Home</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Headline results: 3 per row (2 rows), shown under "Research at a Glance" */
+    .stats { grid-template-columns: repeat(3, 1fr); margin: 18px 0 48px; text-align: left; }
+    .stat:nth-child(5) { border-top-color: var(--green-deep); }
+    .stat:nth-child(6) { border-top-color: var(--orange-deep); }
+
+    /* Key features of the proposed system (hero): icon tiles with labels */
+    .features-head { margin-top: 56px; text-align: center; }
+    .features { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; margin-top: 22px; }
+    .feature { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+    .feature-icon {
+      width: 96px; height: 96px; border-radius: 26px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--surface); box-shadow: 0 10px 30px rgba(31, 42, 29, 0.08);
+      transition: transform var(--t), box-shadow var(--t);
+    }
+    .feature:hover .feature-icon { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(31, 42, 29, 0.13); }
+    .feature-icon svg { width: 46px; height: 46px; }
+    .feature-icon .fill { fill: #b9dc8c; }
+    .feature-icon .line { fill: none; stroke: var(--green-deep); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .feature h3 { font-family: var(--font-body); font-size: 0.98rem; font-weight: 500; color: var(--text-muted); margin: 0; }
+
+    @media (max-width: 980px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .features { grid-template-columns: repeat(3, 1fr); row-gap: 32px; }
+    }
+    @media (max-width: 560px) {
+      .features { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION (CSS-only mobile menu) ===== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Bhasha home">
+        <img src="images/bhasha-logo.webp" alt="Bhasha logo" width="125" height="50" />
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu" />
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="domain.html">Domain</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="presentations.html">Presentations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">🌿 <b>R26-DS-009</b> · Department of Computer Science, SLIIT</div>
+          <h1><span class="accent">Bhasha</span> — Early literacy monitoring and reading-writing Skills enhancement in Sinhala and Tamil Languages</h1>
+          <p class="hero-lead">A bilingual early-literacy monitoring platform developed for Sinhala- and Tamil-medium primary school learners aged 8 to 10 that brings handwriting and oral-reading analysis together to help identify difficulties in each language.</p>
+          <div class="hero-cta">
+            <a href="domain.html" class="btn btn-primary">Explore the Research →</a>
+            <a href="documents.html" class="btn btn-outline">View Documents</a>
+          </div>
+        </div>
+        <div class="hero-logo-card">
+          <img src="images/bhasha-logo.webp" alt="Bhasha logo" width="420" height="168" />
+          <p>Bilingual early-literacy monitoring for Sinhala &amp; Tamil primary learners</p>
+          <span class="pid">R26-DS-009 · 2026</span>
+        </div>
+      </div>
+
+      <!-- Key features of the proposed system -->
+      <div class="features-head"><span class="eyebrow">Key Features of the Proposed System</span></div>
+      <div class="features">
+        <div class="feature"><div class="feature-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="fill" d="M14 34l18-18 6 6-18 18h-6z" transform="translate(2 2)"/><path class="line" d="M12 36l20-20 6 6-20 20H12z"/><path class="line" d="M28 20l6 6"/><path class="line" d="M10 44h28"/></svg></div><h3>Handwriting Analysis</h3></div>
+        <div class="feature"><div class="feature-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle class="fill" cx="31" cy="31" r="11"/><path class="line" d="M7 34l7-20 7 20M9.5 27h9"/><path class="line" d="M25 33l5 5 10-11"/></svg></div><h3>Spelling Correction</h3></div>
+        <div class="feature"><div class="feature-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect class="fill" x="19" y="8" width="14" height="24" rx="7"/><rect class="line" x="17" y="6" width="14" height="24" rx="7"/><path class="line" d="M11 22a13 13 0 0026 0M24 35v7M17 42h14"/></svg></div><h3>Speech Recognition</h3></div>
+        <div class="feature"><div class="feature-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="fill" d="M10 40l9-11 7 6 12-15v20z"/><path class="line" d="M8 8v32h32"/><path class="line" d="M14 32l8-10 7 6 11-14"/><path class="line" d="M34 14h6v6"/></svg></div><h3>Fluency Profiling</h3></div>
+        <div class="feature"><div class="feature-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle class="fill" cx="23" cy="23" r="12"/><circle class="line" cx="21" cy="21" r="12"/><path class="line" d="M30 30l11 11M17 17l8 8M25 17l-8 8"/></svg></div><h3>Reading Error Detection</h3></div>
+        <div class="feature"><div class="feature-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle class="fill" cx="26" cy="26" r="15"/><circle class="line" cx="24" cy="24" r="16"/><path class="line" d="M8 24h32M24 8c5 5 5 27 0 32M24 8c-5 5-5 27 0 32"/></svg></div><h3>Bilingual Support (Sinhala &amp; Tamil)</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABSTRACT ===== -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="split">
+        <div>
+          <span class="eyebrow">Abstract</span>
+          <h2 class="section-title">About the Project</h2>
+          <div class="divider"></div>
+          <p style="color:var(--text-muted);margin-bottom:16px;">BHASHA is a bilingual early-literacy monitoring platform created to make the assessment of young learners more meaningful, consistent, and accessible in Sinhala- and Tamil-medium classrooms. Designed for primary school learners <B> aged 8 to 10</B> , the project responds to a practical classroom challenge: teachers often need to review exercise books, listen to individual reading, and rely on separate observations to understand how each child is progressing. BHASHA brings these different forms of evidence together by analysing handwriting and oral reading within one platform, helping to identify spelling and grammatical difficulties, handwriting-quality issues, reading errors, fluency patterns, and areas that may require further practice, while presenting feedback in a clear and child-friendly form.</p>
+          <p style="color:var(--text-muted);margin-bottom:16px;">Developed by research group <B>R26-DS-009</B> at the Sri Lanka Institute of Information Technology, BHASHA combines machine learning, language processing, handwriting analysis, speech analysis, learner profiling, and progress monitoring to create a more complete picture of early literacy development.</p>
+          <p style="color:var(--text-muted);margin-bottom:26px;">Evaluated on real handwriting and speech from over 700 students in Colombo and Batticaloa districts, the platform gives learners, teachers and parents one integrated way to identify literacy difficulties, monitor performance and receive personalised feedback and practice support.</p>
+          <a href="domain.html" class="btn btn-warm">Read the Full Domain →</a>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:14px;">Project Snapshot</h3>
+          <table class="info-table">
+            <tr><td>Project ID</td><td>R26-DS-009</td></tr>
+            <tr><td>Institution</td><td>Sri Lanka Institute of Information Technology (SLIIT)</td></tr>
+            <tr><td>Department</td><td>Department of Computer Science</td></tr>
+            <tr><td>Degree</td><td>B.Sc. (Hons) in Information Technology Specialized in Data Science</td></tr>
+            <tr><td>Research Area</td><td>Educational AI — Handwriting &amp; Speech Analysis</td></tr>
+            <tr><td>Supervisor</td><td>Dr. Lakmini Abeywardhana</td></tr>
+            <tr><td>Co-Supervisor</td><td>Ms. Fathima Fanoon</td></tr>
+            <tr><td>Duration</td><td>February 2026 – October 2026</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH AT A GLANCE ===== -->
+  <section class="section">
+    <div class="container center">
+      <span class="eyebrow">Research at a Glance</span>
+      <!-- Headline results -->
+      <div class="stats">
+        <div class="stat"><div class="stat-num">700+</div><div class="stat-label">Students aged 8–10 contributed data</div></div>
+        <div class="stat"><div class="stat-num">98.35%</div><div class="stat-label">Spelling-correction true positive rate</div></div>
+        <div class="stat"><div class="stat-num">90.2%</div><div class="stat-label">Sinhala handwriting-quality accuracy</div></div>
+        <div class="stat"><div class="stat-num">85.57%</div><div class="stat-label">Tamil speech-recognition accuracy</div></div>
+        <div class="stat"><div class="stat-num">75%</div><div class="stat-label">Reader-profiling accuracy per student</div></div>
+        <div class="stat"><div class="stat-num">82.7%</div><div class="stat-label">HTR (Handwriting Text Recognition) accuracy, Sinhala</div></div>
+      </div>
+      <h2 class="section-title">From Problem to Outcome</h2>
+      <div class="divider"></div>
+      <p class="section-sub">The research journey in three steps.</p>
+      <div class="flow" style="text-align:left;">
+        <div class="card"><div class="card-icon">❓</div><h3>The Problem</h3><p>Literacy assessment for young children in Sri Lanka is still done manually, with teachers having no automated way to catch spelling, handwriting, or reading-fluency difficulties early — especially in Sinhala and Tamil, which have almost no supporting technology.</p></div>
+        <div class="flow-arrow">→</div>
+        <div class="card"><div class="card-icon">⚙️</div><h3>Our Approach</h3><p>Analyse children’s handwriting, spelling, and oral reading using trained ML models — handwriting-quality scoring, NLP-based spelling correction, and speech-recognition-driven fluency profiling (hesitation, accuracy, sentence-length analysis) — across Sinhala and Tamil.</p></div>
+        <div class="flow-arrow">→</div>
+        <div class="card"><div class="card-icon green">🌱</div><h3>Key Outcome</h3><p>A bilingual platform that detects literacy difficulties across handwriting, spelling, and reading fluency, and gives teachers/students clear, actionable feedbacks</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPONENTS ===== -->
+  <section class="section bg-alt">
+    <div class="container">
+      <span class="eyebrow">Key Contributions</span>
+      <h2 class="section-title">Research Components</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Four components, each led by one member of the research group.</p>
+      <div class="grid-4">
+        <div class="card"><div class="card-icon">1</div><h3>Handwriting Text Recognition, Spelling &amp; Grammar Correction</h3><p>A fine-tuned TrOCR model reads children's handwriting; a hybrid spelling module and Gemini LLM correct errors with child-friendly explanations.</p></div>
+        <div class="card"><div class="card-icon green">2</div><h3>Handwriting Quality Analysis</h3><p>Language-specific ML models rate handwriting quality from structural features and give explainable, personalised improvement tips.</p></div>
+        <div class="card"><div class="card-icon">3</div><h3>Speech Recognition &amp; Error Identification</h3><p>Fine-tuned Whisper models transcribe oral reading and measure reading errors, accuracy and reading behaviour.</p></div>
+        <div class="card"><div class="card-icon green">4</div><h3>Reading Fluency Profiling &amp; Activity Recommendation</h3><p>Whisper transcription and acoustic analysis feed a Random Forest Model that profiles each reader and recommends practice activities for their weakest skills.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CURRENT STAGE + QUICK LINKS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="progress-card" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div>
+          <span class="eyebrow">Current Stage</span>
+          <h3 style="font-size:1.3rem;">Draft Thesis Completed</h3>
+        </div>
+        <a href="milestones.html" class="btn btn-primary">See All Milestones →</a>
+      </div>
+      <div class="grid-3">
+        <a href="milestones.html" class="card"><div class="card-icon">📅</div><h3>Milestones</h3><p>Assessments, dates and marks allocated across the project.</p></a>
+        <a href="documents.html" class="card"><div class="card-icon green">📄</div><h3>Documents</h3><p>Charter, proposal, checklists and final reports.</p></a>
+        <a href="presentations.html" class="card"><div class="card-icon">🎤</div><h3>Presentations</h3><p>Slides from every presentation, proposal to final.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="images/bhasha-logo.webp" alt="Bhasha logo" width="130" height="52" /></div>
+          <p>Early Literacy Monitoring through Handwriting Analysis and Reading-Writing Skill Enhancement in Sinhala and Tamil Languages</p>
+          <p>Project ID: R26-DS-009 · Department of Computer Science, SLIIT</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>More</h4>
+          <ul class="footer-links">
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:nnenuka2002@gmail.com">nnenuka2002@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Bhasha Research Group · Sri Lanka Institute of Information Technology (SLIIT)</span>
+        <span>Last updated: 10 October 2026</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

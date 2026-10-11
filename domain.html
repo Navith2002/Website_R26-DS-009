@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Research domain of Bhasha — literature survey, research gap, problem, objectives, methodology and technologies." />
+  <meta name="author" content="Sandali S. Karunarathna, Akshaya Thangaraja, Akif Ahamed, Nenuka N. Amaradasa" />
+  <title>Bhasha | Domain</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ===== UI screenshot slider: full page width, continuous, right to left ===== */
+    .ui-band { padding: 64px 0 8px; }
+    .ui-band + .section { padding-top: 48px; }
+    .ui-slider { overflow: hidden; position: relative; margin-top: 10px; padding: 10px 0 24px; }
+    .ui-slider::before, .ui-slider::after {
+      content: ""; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none;
+    }
+    .ui-slider::before { left: 0;  background: linear-gradient(to right, var(--bg), transparent); }
+    .ui-slider::after  { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
+    .ui-track { --gap: 24px; display: flex; gap: var(--gap); width: max-content; animation: ui-slide 200s linear infinite; }
+    .ui-slider:hover .ui-track { animation-play-state: paused; }
+    .ui-track img {
+      height: 340px; width: auto; flex-shrink: 0;
+      border-radius: var(--radius-sm); border: 1px solid var(--border); box-shadow: var(--shadow);
+      background: var(--surface);
+    }
+    /* The track holds the 9 images twice; moving it left by half its width loops seamlessly */
+    @keyframes ui-slide { from { transform: translateX(0); } to { transform: translateX(calc(-50% - var(--gap) / 2)); } }
+    @media (max-width: 980px) { .ui-track img { height: 260px; } }
+    @media (max-width: 560px) { .ui-band { padding-top: 44px; } .ui-track img { height: 170px; } .ui-track { --gap: 14px; } .ui-slider::before, .ui-slider::after { width: 30px; } }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION (CSS-only mobile menu) ===== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Bhasha home">
+        <img src="images/bhasha-logo.webp" alt="Bhasha logo" width="125" height="50" />
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu" />
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="domain.html" class="active">Domain</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="presentations.html">Presentations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Research Domain</h1>
+      <p>Literature survey, research gap, problem, objectives, methodology, technologies and findings.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>Domain</div>
+    </div>
+  </section>
+
+  <!-- ===== SYSTEM INTERFACE: full-width continuous slider (right to left) ===== -->
+  <section class="ui-band" id="interface">
+    <div class="container container-wide center">
+      <span class="eyebrow">System Interface</span>
+      <h2 class="section-title">Bhasha in Action</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="ui-slider">
+      <div class="ui-track">
+        <img src="images/ui/1.png" alt="Bhasha system screen 1" />
+        <img src="images/ui/2.png" alt="Bhasha system screen 2" />
+        <img src="images/ui/3.png" alt="Bhasha system screen 3" />
+        <img src="images/ui/4.png" alt="Bhasha system screen 4" />
+        <img src="images/ui/5.png" alt="Bhasha system screen 5" />
+        <img src="images/ui/6.png" alt="Bhasha system screen 6" />
+        <img src="images/ui/7.png" alt="Bhasha system screen 7" />
+        <img src="images/ui/8.png" alt="Bhasha system screen 8" />
+        <img src="images/ui/9.png" alt="Bhasha system screen 9" />
+        <!-- duplicate set for a seamless loop -->
+        <img src="images/ui/1.png" alt="" aria-hidden="true" />
+        <img src="images/ui/2.png" alt="" aria-hidden="true" />
+        <img src="images/ui/3.png" alt="" aria-hidden="true" />
+        <img src="images/ui/4.png" alt="" aria-hidden="true" />
+        <img src="images/ui/5.png" alt="" aria-hidden="true" />
+        <img src="images/ui/6.png" alt="" aria-hidden="true" />
+        <img src="images/ui/7.png" alt="" aria-hidden="true" />
+        <img src="images/ui/8.png" alt="" aria-hidden="true" />
+        <img src="images/ui/9.png" alt="" aria-hidden="true" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-wide domain-layout">
+
+      <!-- Sticky table of contents -->
+      <aside class="toc">
+        <h4>On this page</h4>
+        <a href="#literature">1. Literature Survey</a>
+        <a href="#gap">2. Research Gap</a>
+        <a href="#problem">3. Research Problem</a>
+        <a href="#objectives">4. Research Objectives</a>
+        <a href="#methodology">5. Methodology</a>
+        <a href="#technologies">6. Technologies Used</a>
+        <a href="#results">7. Results &amp; Findings</a>
+        <a href="#future">8. Limitations &amp; Future Work</a>
+      </aside>
+
+      <div>
+        <!-- 1. LITERATURE SURVEY -->
+        <article class="domain-section" id="literature">
+          <span class="eyebrow">Section 1</span>
+          <h2>Literature Survey</h2>
+          <div class="divider"></div>
+          <p>Early literacy is the foundation for a child's later academic success. Research on automating literacy assessment spans handwritten text recognition, handwriting-quality analysis, spelling and grammar correction, speech recognition and reading-fluency analysis. However, most existing work targets high-resource languages or adult users, and very little addresses young Sinhala and Tamil learners.</p>
+
+          <h3>A. Handwriting Text Recognition, Spelling &amp; Grammar Correction</h3>
+          <p>Zhang et al. and Al Ali et al. fine-tuned TrOCR using a growing-chunk strategy, moving the model from single lines to full pages, while Faly et al. combined YOLOv8 line detection with a separately optimised TrOCR recogniser. None of these has adapted TrOCR to pencil-written Sinhala or Tamil on ruled exercise books. For spelling, SinSpell (Liyanapathirana et al.) expands static affix rules without ranking candidates, Sithamparanathan et al. rank suggestions with a generic language-model score, and neural correctors produce a single output without a confidence score to decide between auto-correcting and flagging. LLM-based grammar correction (e.g. Gemini) has mainly been evaluated on adults and university students, and rule-based feedback systems such as SinhaLearn return fixed, pre-written replies rather than explanations adapted to a child's mistake.</p>
+
+          <h3>B. Handwriting Quality Analysis</h3>
+          <p>Patil et al. showed that handwriting quality can be assessed from structural features such as stroke geometry, curvature, spacing, proportions and shape consistency, but without pedagogical feedback for children or Sinhala/Tamil script requirements. Arambewela et al. built a real-time Sinhala writing assistant for kids focused on letter-level support, and Sivapalan documented common Tamil handwriting difficulties among primary learners with remedial guidance — but no automated, computational quality-assessment model covering word spacing, baseline alignment, size consistency and page-level organisation.</p>
+
+          <h3>C. Speech Recognition &amp; Error Identification</h3>
+          <p>ARUNALU (Sandathara et al.) combined voice recognition with phonological instruction for Sinhala readers, Sumanasena studied early akshara knowledge in beginner Sinhala readers, and Zhang et al. used AI transcription to analyse children's speech clarity. These studies show the value of speech analysis, but offer limited computational methods for automatically examining children's oral reading, identifying reading errors, or evaluating language-specific pronunciation.</p>
+
+          <h3>D. Reading Fluency Profiling &amp; Activity Recommendation</h3>
+          <p>ARUNALU relies on rule-based dyslexia screening rather than acoustic-feature-based fluency assessment. Perera and Sumanathilaka built a Whisper-based Sinhala speech-to-text pipeline with SinBERT and mT5/Mistral correction, but for adult text correction only. da Silva et al. predicted children's oral reading fluency with machine-learning models on Whisper features, but for Portuguese, without learner profiling or personalised activity recommendations.</p>
+
+          <h3>Key Past Studies</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>#</th><th>Authors (Year)</th><th>Approach</th><th>Limitation</th></tr>
+              <tr><td>1</td><td>Zhang et al. (2023)</td><td>TrOCR extended for localisation-free, full-page OCR</td><td>Not trained on pencil-written Sinhala/Tamil on ruled books</td></tr>
+              <tr><td>2</td><td>Liyanapathirana et al. (2021)</td><td>SinSpell — Hunspell-based Sinhala spell checker</td><td>Candidates from static affix rules, no scoring or ranking</td></tr>
+              <tr><td>3</td><td>Francis et al. (2024)</td><td>SinhaLearn — NLP, CNN and OCR for Grade 5 scholarship students</td><td>Fixed, pre-written feedback; limited to 3–5 sentences</td></tr>
+              <tr><td>4</td><td>Arambewela et al. (2022)</td><td>Real-time Sinhala writing assistant for kids</td><td>Letter-level support only; no page-level quality assessment</td></tr>
+              <tr><td>5</td><td>Sandathara et al. (2020)</td><td>ARUNALU — voice recognition and phonological training for dyslexia</td><td>Rule-based screening; no acoustic fluency analysis or profiling</td></tr>
+              <tr><td>6</td><td>Perera &amp; Sumanathilaka</td><td>Fine-tuned Whisper + SinBERT / mT5 for Sinhala dyslexia assistance</td><td>Adult text correction only; no fluency assessment</td></tr>
+              <tr><td>7</td><td>da Silva et al. (2025)</td><td>ML fluency prediction from Whisper ASR features</td><td>Portuguese only; no learner profiling or recommendations</td></tr>
+            </table>
+          </div>
+        </article>
+
+        <!-- 2. RESEARCH GAP -->
+        <article class="domain-section" id="gap">
+          <span class="eyebrow">Section 2</span>
+          <h2>Research Gap</h2>
+          <div class="divider"></div>
+          <p>Existing work leaves the following gaps for primary-school literacy assessment in Sri Lanka:</p>
+          <ul class="bullets">
+            <li>No TrOCR model has been fine-tuned for pencil-written Sinhala or Tamil handwriting on ruled exercise books, which contain blue lines, shadows, eraser smudges and bleed-through.</li>
+            <li>Sinhala and Tamil spelling correctors do not rank candidates by both word frequency and edit distance, or use a confidence score to decide between auto-correcting and flagging a word.</li>
+            <li>Grammar-correction systems target adults and return fixed replies instead of child-friendly explanations adapted to each mistake.</li>
+            <li>There is no automated, explainable handwriting-quality model for Sinhala and Tamil that works beyond letter level and is validated against teacher ratings.</li>
+            <li>There is no automated oral-reading assessment for Sinhala and Tamil children that profiles readers by behaviour and recommends targeted practice activities.</li>
+          </ul>
+
+          <h3>Comparison with Existing Research</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>Research</th><th>Sinhala &amp; Tamil</th><th>Children's handwriting recognition</th><th>Handwriting quality assessment</th><th>Oral reading analysis</th><th>Personalised child feedback</th></tr>
+              <tr><td>Sithamparanathan et al. [11]</td><td class="yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+              <tr><td>SinhaLearn — Francis et al. [15]</td><td class="no">✗</td><td class="yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+              <tr><td>Arambewela et al. [8]</td><td class="no">✗</td><td class="no">✗</td><td class="yes">✓</td><td class="no">✗</td><td class="yes">✓</td></tr>
+              <tr><td>ARUNALU — Sandathara et al. [16]</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Perera &amp; Sumanathilaka [21]</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="yes">✓</td><td class="no">✗</td></tr>
+              <tr class="ours"><td>🌿 Bhasha (Proposed)</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            </table>
+          </div>
+        </article>
+
+        <!-- 3. RESEARCH PROBLEM -->
+        <article class="domain-section" id="problem">
+          <span class="eyebrow">Section 3</span>
+          <h2>Research Problem</h2>
+          <div class="divider"></div>
+          <p>Early literacy has become a serious educational concern in Sri Lanka, especially after the pandemic, as learning shifted toward digital devices and less time was spent on reading and writing. According to the Ministry of Education (2023), only <strong>6%</strong> of Grade 3 students achieved the expected reading skills, while <strong>94%</strong> did not reach the expected overall literacy standard. The same assessment found that 73% showed inadequate listening skills, 80% inadequate speaking skills, 63% needed reading assistance and 66% had not developed sufficient writing skills.</p>
+          <p>Children aged 8 to 10 are moving from <em>learning to read</em> to <em>reading to learn</em>, and those who fall behind struggle in later grades. Yet literacy assessment in primary schools is still mostly manual, time-consuming and hard to repeat regularly for every pupil. Automating it for Sinhala and Tamil is difficult: both scripts have complex letters and diacritics, children write in pencil on ruled exercise books with shadows and uneven lighting, and speech recordings are affected by background noise and varied pronunciation — while language technology for both languages remains limited.</p>
+          <div class="objective-main" style="margin-top:18px;">
+            <h3>Research Question</h3>
+            <p>How can handwriting and speech from 8–10-year-old learners be analysed automatically to assess, monitor and improve their reading and writing skills in Sinhala and Tamil?</p>
+          </div>
+        </article>
+
+        <!-- 4. RESEARCH OBJECTIVES -->
+        <article class="domain-section" id="objectives">
+          <span class="eyebrow">Section 4</span>
+          <h2>Research Objectives</h2>
+          <div class="divider"></div>
+          <div class="objective-main">
+            <h3>Main Objective</h3>
+            <p>To develop a bilingual, multimodal early-literacy monitoring framework that automatically assesses the handwriting and oral reading of primary-school learners aged 8–10 in Sinhala and Tamil, and provides personalised, child-friendly feedback and practice support to learners, teachers and parents.</p>
+          </div>
+          <h3 style="margin-top:6px;">Sub-Objectives</h3>
+          <div class="grid-2">
+            <div class="objective"><h4>1. Handwriting Text Recognition, Spelling &amp; Grammar Correction</h4><p>Recognise handwritten Sinhala and Tamil text with a fine-tuned TrOCR model, correct spelling and grammar errors, and explain each correction in child-friendly language.</p></div>
+            <div class="objective"><h4>2. Handwriting Quality Analysis</h4><p>Assess handwriting quality with teacher-trained, language-specific ML models and give explainable feedback with personalised improvement suggestions.</p></div>
+            <div class="objective"><h4>3. Speech Recognition &amp; Error Identification</h4><p>Transcribe children's oral reading with fine-tuned Whisper models and identify reading errors, accuracy and reading behaviour.</p></div>
+            <div class="objective"><h4>4. Reading Fluency Profiling &amp; Activity Recommendation</h4><p>Classify reading fluency, profile learners by reading behaviour and recommend targeted practice activities for their skill gaps.</p></div>
+          </div>
+        </article>
+
+        <!-- 5. METHODOLOGY -->
+        <article class="domain-section" id="methodology">
+          <span class="eyebrow">Section 5</span>
+          <h2>Methodology</h2>
+          <div class="divider"></div>
+          <p>The system takes handwritten pages and voice recordings from students. Handwritten samples are checked for spelling, grammar and handwriting-quality issues, which are corrected and explained in a child-friendly way with handwriting-specific suggestions. Voice recordings are transcribed and analysed to detect reading errors, assess fluency and measure reading proficiency. The skill profile, handwriting-quality metrics, feedback and fluency assessments from all four components are brought together in a unified dashboard for teachers and parents to monitor progress.</p>
+
+          <figure class="figure figure-arch">
+            <img src="images/bhasha_architecture.png" alt="Bhasha system overview diagram showing the four components from user input to output" width="608" height="577" />
+            <figcaption>Figure 1: System overview of Bhasha</figcaption>
+          </figure>
+
+          <h3>Research Pipeline</h3>
+          <div class="pipeline">
+            <span class="pipe-step">Data Collection</span><span class="pipe-arrow">→</span>
+            <span class="pipe-step">Pre-processing</span><span class="pipe-arrow">→</span>
+            <span class="pipe-step">Recognition (TrOCR / Whisper)</span><span class="pipe-arrow">→</span>
+            <span class="pipe-step">Analysis &amp; Correction</span><span class="pipe-arrow">→</span>
+            <span class="pipe-step">Feedback &amp; Dashboard</span>
+          </div>
+
+          <h3>Dataset</h3>
+          <table class="info-table">
+            <tr><td>Data source(s)</td><td>700+ randomly selected scholarship students aged 8–10 from Sinhala-medium schools in Colombo district and Tamil-medium schools in Batticaloa district; text corpora built from Grade 3–5 teacher guides</td></tr>
+            <tr><td>Size</td><td>2,098 Sinhala and 1,148 Tamil handwriting images; 4,207 Sinhala and 2,100+ Tamil audio recordings</td></tr>
+            <tr><td>Period / scope</td><td>Primary learners in Grades 3–5 (ages 8–10); single words and sentences from daily exercise books</td></tr>
+            <tr><td>Pre-processing</td><td>Image: lighting normalisation, ruled-line removal, segmentation, 80:10:10 split with augmentation. Audio: 16 kHz mono, silence trimming, normalisation, noise reduction</td></tr>
+          </table>
+
+          <h3>A. Handwriting Text Recognition, Spelling &amp; Grammar Correction — Sandali S. Karunarathna</h3>
+          <p>Pages are classified by brightness and normalised, and blue ruled lines are removed. A pretrained TrOCR model is fine-tuned with the growing-chunk method: the page is split into smaller sections, each recognised and then reassembled in reading order. A per-word OCR confidence score routes low-confidence words to re-recognition and priority spell-checking. A hybrid spelling module checks each word against Hunspell and SinSpell dictionaries, frequency lists and root + suffix combinations, and ranks correction candidates by frequency and corpus-weighted edit distance — replacing a word only above a confidence threshold, otherwise flagging it. Errors are grouped into six categories (e.g. punctuation, vowel errors, letter confusions). Lines are reassembled into sentences, and Google's Gemini LLM corrects only genuine grammar errors (word order, subject–verb agreement, conjunctions, verb form), giving a technical explanation in English and a simple explanation in Sinhala or Tamil.</p>
+          <h3>B. Handwriting Quality Analysis — Akshaya Thangaraja</h3>
+          <p>Images go through skew correction, shadow and lighting normalisation, adaptive binarisation, noise reduction and ruled-line removal, then are segmented into lines, words and characters. Tamil analysis uses a 10-feature representation; Sinhala adds curve and loop, stroke consistency, density, shape consistency, upper–lower balance and spacing-variation features for a 15-feature representation. Logistic Regression, KNN, RBF-SVM, Extra Trees and Random Forest are compared with stratified five-fold cross-validation (Macro-F1), selecting Logistic Regression for Sinhala and Random Forest for Tamil. Features are validated against teacher sub-ratings with Spearman correlation; permutation importance and standardised coefficients explain predictions, and low-confidence results can be referred to a teacher. Detected issues (spacing, baseline, size, curves, broken strokes, imbalance) become kid-friendly improvement suggestions.</p>
+          <h3>C. Speech Recognition &amp; Error Identification — Akif Ahamed</h3>
+          <p>Recordings are converted to 16 kHz mono, silence-trimmed, normalised and noise-reduced, then paired with their reference transcriptions. Separate Whisper models are fine-tuned for Sinhala and Tamil. Predicted and expected text are normalised (punctuation, spacing, Unicode) and compared to compute Word Error Rate and reading accuracy from substitutions, omissions and insertions. Reading time, speech rate and vocal energy are also recorded to describe reading behaviour and estimate the confidence of each evaluation.</p>
+          <h3>D. Reading Fluency Profiling &amp; Activity Recommendation — Nenuka N. Amaradasa</h3>
+          <p>Each recording is cleaned using noise reduction, an 80–7000 Hz band-pass filter and VAD masking, then transcribed with a fine-tuned Sinhala Whisper model. Before scoring, ambiguous Sinhala letter pairs (ල/ළ, ශ/ෂ) are standardised. Reading accuracy is measured with Character Error Rate (CER). Librosa extracts timing features from the speech-only segments: reading rate (characters per second), hesitation count (pauses over 150 ms), average pause length, energy variance and duration. For each student, these are averaged into a four-dimensional skill vector covering accuracy, fluency, hesitation and sentence-length gap. K-Means groups the 62 students into three reader profiles. A Random Forest, validated with leave-one-student-out cross-validation, then predicts a child’s profile from a single new recording. Finally, the recommendation engine ranks practice activities by cosine similarity between the child’s weakest skill dimensions and each activity’s target skills. Mel-spectrogram CNNs were also evaluated as an alternative, but they underperformed and are not part of the final pipeline.</p>
+        </article>
+
+        <!-- 6. TECHNOLOGIES -->
+        <article class="domain-section" id="technologies">
+          <span class="eyebrow">Section 6</span>
+          <h2>Technologies Used</h2>
+          <div class="divider"></div>
+          <div class="tech-group"><h4>Recognition &amp; Language Models</h4><div class="pills"><span class="pill">TrOCR (fine-tuned)</span><span class="pill">OpenAI Whisper Small (fine-tuned)</span><span class="pill">Google Gemini LLM</span></div></div>
+          <div class="tech-group"><h4>Machine Learning</h4><div class="pills"><span class="pill">CNN (fluency &amp; difficulty)</span><span class="pill">Logistic Regression</span><span class="pill">Random Forest</span><span class="pill">K-Means Clustering</span><span class="pill">KNN</span><span class="pill">RBF-SVM</span><span class="pill">Extra Trees</span></div></div>
+          <div class="tech-group"><h4>Language Resources &amp; Audio</h4><div class="pills"><span class="pill">Hunspell</span><span class="pill">SinSpell dictionaries</span><span class="pill">Word-frequency lists</span><span class="pill">Librosa</span><span class="pill">Mel spectrograms</span></div></div>
+          <div class="tech-group"><h4>Languages, Frameworks &amp; Tools</h4><div class="pills"><span class="pill">Python</span><span class="pill">JavaScript</span><span class="pill">React</span><span class="pill">FastAPI</span><span class="pill">Vite</span><span class="pill">PyTorch</span></div></div>
+        </article>
+
+        <!-- 7. RESULTS -->
+        <article class="domain-section" id="results">
+          <span class="eyebrow">Section 7</span>
+          <h2>Results &amp; Findings</h2>
+          <div class="divider"></div>
+          <p>Each component was evaluated on held-out Sinhala and Tamil data, and the system was also reviewed by scholarship teachers and Sinhala instructors.</p>
+
+          <h3>A. Handwriting Text Recognition (TrOCR)</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>Language</th><th>CER</th><th>WER</th><th>Exact Line Match</th></tr>
+              <tr><td>Sinhala</td><td>17.3%</td><td>42.9%</td><td>35.5%</td></tr>
+              <tr><td>Tamil</td><td>50.7%</td><td>78.1%</td><td>15.6%</td></tr>
+            </table>
+          </div>
+
+          <h3>B. Hybrid Spelling Correction</h3>
+          <p>Tested on 1,068 Sinhala and 1,000 Tamil words and sentences: 660 correct samples were preserved, 298 incorrect samples were corrected, and only 5 errors remained uncorrected.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>Module</th><th>True Positive Rate</th><th>Precision</th><th>F1-score</th></tr>
+              <tr class="ours"><td>Hybrid spelling module</td><td>98.35%</td><td>73.89%</td><td>84.42%</td></tr>
+            </table>
+          </div>
+
+          <h3>C. Handwriting Quality Classification (5-fold CV, 990 samples)</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>Language</th><th>Model</th><th>Accuracy</th><th>Balanced Accuracy</th><th>Macro F1</th></tr>
+              <tr><td>Sinhala</td><td>Logistic Regression</td><td>90.2%</td><td>90.6%</td><td>90.4%</td></tr>
+              <tr><td>Tamil</td><td>Random Forest</td><td>78.7%</td><td>79.0%</td><td>78.0%</td></tr>
+            </table>
+          </div>
+
+          <h3>D. Speech Recognition (Whisper Medium)</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>Language</th><th>WER</th><th>CER</th><th>WER-derived Accuracy</th></tr>
+              <tr><td>Tamil</td><td>14.4%</td><td>–</td><td>85.57%</td></tr>
+              <tr><td>Sinhala</td><td>37.7%</td><td>29.8%</td><td>62.2%</td></tr>
+            </table>
+          </div>
+
+          <h3>E. CNN Fluency Classification (accuracy 61.1%)</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>Class</th><th>Precision</th><th>Recall</th><th>F1</th></tr>
+              <tr><td>Fluent</td><td>0%</td><td>0%</td><td>0%</td></tr>
+              <tr><td>Moderate</td><td>62%</td><td>93%</td><td>74%</td></tr>
+              <tr><td>Struggling</td><td>55%</td><td>24%</td><td>33%</td></tr>
+            </table>
+          </div>
+
+          <h3>F. K-Means Student Profiling</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>Profile</th><th>n</th><th>Accuracy</th><th>Fluency</th><th>Hesitation</th></tr>
+              <tr><td>Accurate &amp; Slow &amp; Hesitant</td><td>10</td><td>33%</td><td>30.7%</td><td>76.6%</td></tr>
+              <tr><td>Accurate &amp; Slow Reader</td><td>34</td><td>22.9%</td><td>24.6%</td><td>37.2%</td></tr>
+              <tr><td>Accurate &amp; Fast Reader</td><td>18</td><td>15.2%</td><td>61.3%</td><td>32.5%</td></tr>
+            </table>
+          </div>
+
+          <h3>Key Findings</h3>
+          <ul class="bullets">
+            <li>The hybrid spelling module corrected almost all real spelling errors (98.35% true positive rate) while preserving correctly written words.</li>
+            <li>Teacher-trained handwriting-quality models reached 90.2% accuracy for Sinhala and 78.7% for Tamil, with explainable, feature-level feedback.</li>
+            <li>Fine-tuned Whisper Medium models can recognise children's reading in both languages (85.57% WER-derived accuracy for Tamil, 62.2% for Sinhala).</li>
+            <li>CER gave a more balanced fluency labelling than WER (20.1% Fluent, 58.6% Moderate, 21.3% Struggling vs. 78.7% Struggling with WER).</li>
+            <li>Learner profiling reached 66.75% accuracy per clip and 75.0% per student, identifying three reader profiles separated mainly by reading pace and hesitation.</li>
+          </ul>
+        </article>
+
+        <!-- 8. LIMITATIONS & FUTURE WORK -->
+        <article class="domain-section" id="future">
+          <span class="eyebrow">Section 8</span>
+          <h2>Limitations &amp; Future Work</h2>
+          <div class="divider"></div>
+          <div class="grid-2">
+            <div>
+              <h3 style="margin-top:0;">Limitations</h3>
+              <ul class="bullets">
+                <li>Tamil handwriting recognition remains weak (50.7% CER), partly due to the smaller Tamil dataset.</li>
+                <li>The reader profiles come from only 62 students. And the teachers also agreed with each other only moderately (κ = 0.44), so the profiling is not yet proven at a larger scale.</li></li>
+                <li>Exercise-book images with blue ruled lines, eraser smudges and bleed-through make recognition and quality analysis harder.</li>
+                <li>The CNN fluency classifier did not recognise the Fluent class, and acoustic features alone poorly explained sentence difficulty.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="margin-top:0;">Future Work</h3>
+              <ul class="bullets">
+                <li>Collect larger and more diverse Sinhala and Tamil datasets, especially for Tamil handwriting and speech.</li>
+                <li>Reassess the CNN fluency approach and cluster validity as more student data becomes available.</li>
+                <li>Expand the dataset to more students and schools. Validate the reader profiles and recommendations with a larger panel of teachers (Fleiss’ κ).</li>
+                <li>Test whether three reader profiles remain optimal or whether other clustering methods represent learner subtypes better.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="images/bhasha-logo.webp" alt="Bhasha logo" width="130" height="52" /></div>
+          <p>Early Literacy Monitoring through Handwriting Analysis and Reading-Writing Skill Enhancement in Sinhala and Tamil Languages</p>
+          <p>Project ID: R26-DS-009 · Department of Computer Science, SLIIT</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>More</h4>
+          <ul class="footer-links">
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:nnenuka2002@gmail.com">nnenuka2002@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Bhasha Research Group · Sri Lanka Institute of Information Technology (SLIIT)</span>
+        <span>Last updated: 10 October 2026</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
